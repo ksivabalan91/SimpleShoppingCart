@@ -43,7 +43,7 @@ public class ShoppingCart{
                     }
                     break;
 
-                case "delete":  // j is introduced to delete multiple items at one go, it will adjust to delete the right item
+                case "delete","remove":  // j is introduced to delete multiple items at one go, it will adjust to delete the right item
                                 // as the list size decreases
                     String[] junk = input_arr[1].split(",", 0);
 
@@ -58,18 +58,18 @@ public class ShoppingCart{
                     break;
 
                 
-                case "remove":
-                String[] junk2 = input_arr[1].split(",", 0);
+                // case "remove":
+                // String[] junk2 = input_arr[1].split(",", 0);
 
-                for (int i = 0,j=0; i<junk2.length;i++,j++){
-                    if(Integer.parseInt(junk2[i])-j  > trolley.size()){
-                        System.out.println("Incorrect item index\n");
-                    } else{
-                        System.out.printf("%s removed from cart\n",trolley.get(Integer.parseInt(junk2[i])-1-j));
-                        trolley.remove(Integer.parseInt(junk2[i])-1-j);
-                    }
-                }
-                break;
+                // for (int i = 0,j=0; i<junk2.length;i++,j++){
+                //     if(Integer.parseInt(junk2[i])-j  > trolley.size()){
+                //         System.out.println("Incorrect item index\n");
+                //     } else{
+                //         System.out.printf("%s removed from cart\n",trolley.get(Integer.parseInt(junk2[i])-1-j));
+                //         trolley.remove(Integer.parseInt(junk2[i])-1-j);
+                //     }
+                // }
+                // break;
 
                 case "list":                    
                     if (trolley.isEmpty()){
